@@ -1,0 +1,74 @@
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .toolbar{
+        display: flex;
+        justify-content: space-between;
+        .left{
+            display: flex;
+            align-items: center;
+            button{
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+                outline: none;
+                .mat-icon{
+                    padding: .5rem;
+                    background: white;
+                    border-radius: 100px;
+                    color: #6a62d2;
+                }
+            }
+            .section-name{
+                font-family: "DM Sans", sans-serif;
+                margin-left: 0.4rem;
+                color: white;
+                letter-spacing: 1px;
+                font-weight: 400;
+            }
+        }
+        .right{
+            .mat-icon{
+                padding: .5rem;
+                font-size: 2.5rem;
+                margin-right: .5rem;
+                cursor: pointer;
+            }
+        }
+    }
+    .sidenav-container{
+        flex: 1;
+        .mat-sidenav{
+            min-width: 250px;
+            .nav-list{
+                padding: 0 !important;
+                display: flex;
+                flex-direction: column;
+                font-family: "DM Sans", sans-serif;
+                .list-item{
+                    padding: 1.2rem 1rem;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin: 0 !important;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    outline: none;
+                    gap: .2rem;
+                }
+                .active{
+                    color: #6a62d2;
+                    background: #e1e0e9;
+                }
+            }
+        }
+        .mat-sidenav-content{
+            padding: 1rem;
+        }
+    }
+}
+

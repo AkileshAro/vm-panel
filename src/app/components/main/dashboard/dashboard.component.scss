@@ -1,0 +1,35 @@
+.dashboard{
+    padding: 1rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+    .mat-form-field {
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    td, th {
+        width: 25%;
+        font-family: 'DM Sans', sans-serif !important;
+    }
+
+    .mat-form-field, .mat-paginator{
+        font-family: 'DM Sans', sans-serif !important;
+    }
+
+    .example-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: auto;
+        box-shadow: 1px 1px 10px rgba(0,0,0,.1) !important;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+@media(max-width : 550px){
+    table{
+        width: 600px !important;
+    }
+}

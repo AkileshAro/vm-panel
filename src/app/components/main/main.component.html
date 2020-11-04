@@ -1,0 +1,37 @@
+<div class="main">
+    <mat-toolbar color="primary" class="toolbar">
+        <div class="left">
+            <button mat-icon-button (click)="snav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <h3 class="section-name">{{current_section}}</h3>
+        </div>
+        <div class="right">
+            <mat-icon [matMenuTriggerFor]="menu">account_circle</mat-icon>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)='logOut()'>
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Sign out</span>
+                </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #snav mode='over'>
+            <div class="nav-list">
+                <p routerLink="/main/dashboard" [class.active]="current_section == 'Dashboard'" class="list-item">
+                    <mat-icon>bar_chart</mat-icon> Dashboard
+                </p>
+                <p routerLink="/main/create" [class.active]="current_section == 'Create'" class="list-item">
+                    <mat-icon>add</mat-icon> Create
+                </p>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <app-dashboard *ngIf='current_section == "Dashboard"'></app-dashboard>
+            <app-create *ngIf='current_section == "Create"'></app-create>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
